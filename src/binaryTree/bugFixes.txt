@@ -1,0 +1,6 @@
+1 - getLeft & getRight: fix the method so that when we pass a the ref to the left of the initialized tree 
+we get the next left of the passed args.
+ex: const bt= new binaryTree(4, new binaryTree(5, new binaryTree(10)), new binaryTree(8));
+bt.getLeft(bt.left) should return only 10
+
+2 - fix in isleaf where in only checks the children nodes of the root node
