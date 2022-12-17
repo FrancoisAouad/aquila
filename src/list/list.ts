@@ -1,10 +1,10 @@
 export class list<T> {
     protected value: T;
     protected next: any;
-    protected index: number;
-    constructor(value: any = 0, index: number = 0, next: any = null) {
+    // protected index: number;
+    constructor(value: any = 0, next: any = null) {
         this.value = value;
-        this.index = index;
+        // this.index = index;
         this.next = next;
     }
     mergeTwoLists = (list1: list<T>, list2: list<T>) => {
@@ -24,14 +24,12 @@ export class list<T> {
         }
     };
     append = (value: any) => {
-        console.log('iiiiiii', Object.keys(this));
-        console.log('qqqqqq', this);
-        return (this.next = new list(value, this.index + 1, null));
+        // console.log('iiiiiii', Object.keys(this));
+        // console.log('qqqqqq', this);
+        return (this.next = new list(value));
     };
+    insert=()=>{}
     size = () => {};
     remove = () => {};
     isEmpty = () => {};
-    getKeys = () => {
-        return Object.keys(list);
-    };
 }

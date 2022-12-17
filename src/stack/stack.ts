@@ -5,13 +5,14 @@ export class stack<T> {
     }
 
     push = (value: T) => {
+        if (value === undefined) return;
         this.element.push(value);
     };
     pop = () => {
         return this.element.pop();
     };
     top = () => {
-        console.log(this.element[this.element.length - 1]);
+        // console.log(this.element[this.element.length - 1]);
         return this.element[this.element.length - 1];
     };
     print = () => {
